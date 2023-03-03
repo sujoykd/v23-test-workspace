@@ -16,22 +16,20 @@ public class SimpleIT extends TestBenchTestCase {
 
     @Before
     public void setup() throws Exception {
-        // Create a new browser instance
         this.setDriver(new ChromeDriver());
-        // Open the application
         this.getDriver().get("http://localhost:8080/");
     }
 
     @Test
     public void selectRowTestBench() throws InterruptedException {
-        // Find the first button (<vaadin-button>) on the page
         final GridElement grid = this.$(GridElement.class).first();
 
-        // Click it
+        // select the first row
         grid.select(0);
 
         final var text = this.$(DivElement.class).id("testDiv");
-        // Check the the value of the button is "Clicked"
+
+        // Check that the div is populated with the correct text
         Assert.assertEquals("eOMtThyhVNLWUZNRcBaQKxI", text.getText());
     }
 
@@ -39,7 +37,7 @@ public class SimpleIT extends TestBenchTestCase {
     public void selectRowSelenium() throws InterruptedException {
 
         final var text = this.$(DivElement.class).id("testDiv");
-        // Check the the value of the button is "Clicked"
+        // Check that the div is populated with the correct text
         Assert.assertEquals("eOMtThyhVNLWUZNRcBaQKxI", text.getText());
     }
 
