@@ -33,3 +33,10 @@ html {
   --lumo-success-contrast-color: hsl(159, 29%, 10%);
   --lumo-success-text-color: hsl(159, 61%, 40%);
 }
+
+
+[slot="error-message"]{
+    color: green;
+    white-space: pre-line;
+    line-height: var(--lumo-font-size-xs);
+}

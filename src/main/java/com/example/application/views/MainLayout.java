@@ -9,6 +9,7 @@ import com.vaadin.flow.router.RouterLayout;
 public class MainLayout extends VerticalLayout implements RouterLayout {
 
     public MainLayout() {
+        this.setSizeFull();
     }
 
 }
